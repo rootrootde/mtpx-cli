@@ -9,14 +9,14 @@ This is a Go-based CLI tool for interacting with MTP (Media Transfer Protocol) d
 ## Architecture
 
 The codebase is organized as follows:
-- `main.go` - Original implementation (single file)
-- `main_refactored.go` - Refactored version with improved structure:
+- `main.go` - Main implementation with clean, modular structure:
   - `CLI` struct encapsulates device and storage
   - Separate handler functions for each command
   - `ProgressHandler` struct eliminates code duplication
   - JSON output helper functions for consistent formatting
   - Better error handling with context
 - Uses the `github.com/ganeshrvel/go-mtpx` library for MTP operations
+- Uses the `github.com/ganeshrvel/go-mtpfs/mtp` library for device types
 - Outputs JSON-formatted progress and results for machine parsing
 - Uses sentinel values (e.g., `MTPX_LIST_DONE`) to indicate operation completion
 

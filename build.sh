@@ -11,6 +11,6 @@ echo "Getting dependencies..."
 go get github.com/ganeshrvel/go-mtpx
 
 echo "Building mtpx-cli..."
-go build -o mtpx-cli main_refactored.go
+go build -o mtpx-cli main.go
 
 echo "Build complete: ./mtpx-cli"
